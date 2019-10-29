@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load humanize %}
 
+{% block title %}
+| {{listing.title}}
+{% endblock title %}
+
 {% block content %}
 
 <section id="showcase-inner" class="py-5 text-white">
@@ -42,50 +46,50 @@
         <img src="{{listing.photo_main.url}}" alt="" class="img-main img-fluid mb-3">
         <!-- Thumbnails -->
         <div class="row mb-5 thumbs">
-        
-        {% if listing.photo_1 %}
+
+          {% if listing.photo_1 %}
           <div class="col-md-2">
             <a href="{{listing.photo_1.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_1.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
-          
-        {% if listing.photo_2 %}
+          {% endif %}
+
+          {% if listing.photo_2 %}
           <div class="col-md-2">
             <a href="{{listing.photo_2.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_2.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
-        {% if listing.photo_3 %}
+          {% endif %}
+          {% if listing.photo_3 %}
           <div class="col-md-2">
             <a href="{{listing.photo_3.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_3.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
-        {% if listing.photo_4 %}
+          {% endif %}
+          {% if listing.photo_4 %}
           <div class="col-md-2">
             <a href="{{listing.photo_4.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_4.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
-        {% if listing.photo_5 %}
+          {% endif %}
+          {% if listing.photo_5 %}
           <div class="col-md-2">
             <a href="{{listing.photo_5.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_5.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
-        {% if listing.photo_6 %}
+          {% endif %}
+          {% if listing.photo_6 %}
           <div class="col-md-2">
             <a href="{{listing.photo_6.url}}" data-lightbox="home-images">
               <img src="{{listing.photo_6.url}}" alt="" class="img-fluid">
             </a>
           </div>
-        {% endif %}
+          {% endif %}
         </div>
         <!-- Fields -->
         <div class="row mb-5 fields">
@@ -139,7 +143,7 @@
         <!-- Description -->
         <div class="row mb-5">
           <div class="col-md-12">
-          {{listing.description}}
+            {{listing.description}}
           </div>
         </div>
       </div>

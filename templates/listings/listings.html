@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 <!-- {% load static %} -->
 {% load humanize %}
+
+{% block title %}
+| Browse Property Listings
+{% endblock title %}
+
 {% block content %}
 <!-- Breadcrumb -->
 <section id="bc" class="mt-3">
@@ -74,8 +79,8 @@
       </div>
       {% endif %}
       <div class="container">
-      
-      {% if listings.has_other_pages %}
+
+        {% if listings.has_other_pages %}
         <ul class="pagination">
           {% if listings.has_previous %}
           <li class="page-item">
@@ -117,7 +122,7 @@
           </li>
           {% endif %}
         </ul>
-      {% endif %}
+        {% endif %}
       </div>
 </section>
 
